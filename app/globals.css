@@ -304,7 +304,7 @@ a {
 .displaytime {
   position: fixed;
   right: 0;
-  bottom: 0;
+  top: 94vh;
 }
 .About {
   z-index: 2;
