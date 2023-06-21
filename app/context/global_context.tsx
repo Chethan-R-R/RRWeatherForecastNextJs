@@ -55,11 +55,11 @@ export const Global_context_provider=({children}:{children:React.ReactNode})=>{
     const moon=<div className="moon"></div>
     const Sunny_partly_cloudy=<div className="sunny"><img className="partlycloudy" src="/partly_cloudy.svg" alt='' /></div>
     const moon_partly_cloudy=<div className="moon"><img className="partlycloudy" src="/partly_cloudy.svg" alt='' /></div>
-    const Night_Rain=<div className="moon"><img className="rain" src="/partly_cloudy.svg" alt='' /><img className="rain" src="/rain.svg" alt='' /></div>
+    const Night_Rain=<div className="moon"><img className="rain" src="/rain.svg" alt='' /></div>
 
-    const Night_Rain_storm=<div className="moon"><img className="rainstorm" src="/partly_cloudy.svg" alt='' /><img className="rainstorm" src="/rain.svg" alt='' /></div>
-    const sunny_rain_storm=<div className="sunny"><img className="cloudy" src="/partly_cloudy.svg" alt='' /><img className="rainstorm" src="/rain.svg" alt='' /></div>
-    const sunny_rain=<div className="sunny"><img className="rain" src="/partly_cloudy.svg" alt='' /><img className="rain" src="/rain.svg" alt='' /></div>
+    const Night_Rain_storm=<div className="moon"><img className="rainstorm" src="/rain.svg" alt='' /></div>
+    const sunny_rain_storm=<div className="sunny"><img className="rainstorm" src="/rain.svg" alt='' /></div>
+    const sunny_rain=<div className="sunny"><img className="rain" src="/rain.svg" alt='' /></div>
 
     const [theme,setTheme]=useState(Night_Rain_storm)
     
@@ -67,7 +67,7 @@ export const Global_context_provider=({children}:{children:React.ReactNode})=>{
     const [searchTheme,setSearchTheme]=useState(false)
 
     const [currentWeather,setCurrentWeather]=useState<currentWeather>({
-        name:"",
+        name:"Search & select",
         main:{
             temp:273.19,
             feels_like:273.19,

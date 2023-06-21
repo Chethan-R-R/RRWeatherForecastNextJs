@@ -13,7 +13,7 @@ export default function Home() {
   return(
     <main className="main" >
       <div className="themebg">
-      <div className="moon"><img className="rainstorm" src="/partly_cloudy.svg" alt='' /><img className="rainstorm" src="/rain.svg" alt='' /></div>
+      <div className="moon"><img className="rainstorm" src="/rain.svg" alt='' /></div>
       </div>
         <header className="welcometitle">
           <h1>R R</h1>
