@@ -1,2 +1,0 @@
-export const WEATHER_API_KEY="690f0bbbf328f62ed6accf3047d615bd"
-export const PLACES_API_KEY="b8a712a9d3704ffea7704f32f7adea29"
