@@ -55,12 +55,10 @@ export const Global_context_provider=({children}:{children:React.ReactNode})=>{
     const moon=<div className="moon"></div>
     const Sunny_partly_cloudy=<div className="sunny"><img className="partlycloudy" src="/partly_cloudy.svg" alt='' /></div>
     const moon_partly_cloudy=<div className="moon"><img className="partlycloudy" src="/partly_cloudy.svg" alt='' /></div>
-    const cloudy=<div className="sunny"><img className="cloudy" src="/cloudy.svg" alt='' /></div>
-    const night_cloudy=<div className="moon"><img className="mooncloudy" src="/cloudy.svg" alt='' /></div>
     const Night_Rain=<div className="moon"><img className="rain" src="/partly_cloudy.svg" alt='' /><img className="rain" src="/rain.svg" alt='' /></div>
 
     const Night_Rain_storm=<div className="moon"><img className="rainstorm" src="/partly_cloudy.svg" alt='' /><img className="rainstorm" src="/rain.svg" alt='' /></div>
-    const sunny_rain_storm=<div className="sunny"><img className="cloudy" src="/cloudy.svg" alt='' /><img className="rainstorm" src="/rain.svg" alt='' /></div>
+    const sunny_rain_storm=<div className="sunny"><img className="cloudy" src="/partly_cloudy.svg" alt='' /><img className="rainstorm" src="/rain.svg" alt='' /></div>
     const sunny_rain=<div className="sunny"><img className="rain" src="/partly_cloudy.svg" alt='' /><img className="rain" src="/rain.svg" alt='' /></div>
 
     const [theme,setTheme]=useState(Night_Rain_storm)
@@ -125,10 +123,7 @@ export const Global_context_provider=({children}:{children:React.ReactNode})=>{
                 setTheme(sunny_rain)
             }else if(currentWeather.weather[0].main==="Thunderstorm"){
                 setTheme(sunny_rain_storm)
-            }
-            else if(currentWeather.clouds.all>70){
-                setTheme(cloudy)
-            }else if(currentWeather.clouds.all>10){
+            }else if(currentWeather.weather[0].main==="Clouds"){
                 setTheme(Sunny_partly_cloudy)
             }else setTheme(Sunny)
             setSearchTheme(true)
@@ -137,10 +132,7 @@ export const Global_context_provider=({children}:{children:React.ReactNode})=>{
                 setTheme(Night_Rain)
             }else if(currentWeather.weather[0].main==="Thunderstorm"){
                 setTheme(Night_Rain_storm)
-            }
-            else if(currentWeather.clouds.all>70){
-                setTheme(night_cloudy)
-            }else if(currentWeather.clouds.all>10){
+            }else if(currentWeather.weather[0].main==="Clouds"){
                 setTheme(moon_partly_cloudy)
             }else setTheme(moon)
             setSearchTheme(false)
