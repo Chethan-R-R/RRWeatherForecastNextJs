@@ -22,6 +22,14 @@ export default function StatusLayout({
   const [cur, setCur] = useState("");
   const [result, setResult] = useState();
 
+  const scrollRef = useRef<HTMLDivElement | null>(null);
+
+  useEffect(() => {
+    if(scrollRef.current){
+      scrollRef.current.scrollTop = scrollRef.current.scrollHeight;
+    }
+  }, [cur]);
+
   function convertToCelcius(num: number) {
     return (num - 273.15).toFixed(0);
   }
@@ -96,11 +104,11 @@ export default function StatusLayout({
         }
       >
         {Global?.currentWeather.dt !== undefined &&
-        Global?.currentWeather.timezone !== undefined
+          Global?.currentWeather.timezone !== undefined
           ? `${new Date(
-              Global?.currentWeather.dt * 1000 +
-                Global?.currentWeather.timezone * 1000
-            )}`
+            Global?.currentWeather.dt * 1000 +
+            Global?.currentWeather.timezone * 1000
+          )}`
           : ""}
       </p>
       <Link
@@ -186,8 +194,8 @@ export default function StatusLayout({
             );
           })}
         </div>
-        <div className="weatherandsearch">
-          <div className="container">
+        <div className="weatherandsearch" ref={scrollRef} style={{ height: '100%', overflowY: 'scroll' }}>
+          <div className="container" >
             <h1
               className="placename"
               style={

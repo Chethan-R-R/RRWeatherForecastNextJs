@@ -140,6 +140,9 @@ body {
   display: grid;
   grid-template-rows: 400px 1fr;
 }
+.weatherandsearch::-webkit-scrollbar{
+  display: none;
+}
 .searchfeature {
   padding: 1%;
   width: 98%;
