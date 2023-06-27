@@ -207,7 +207,7 @@ a {
 .placename {
   text-shadow: 2px 2px black;
   position: absolute;
-  top: 0;
+  top: 20px;
 }
 .Thunderstorm {
   animation: flash 6s linear infinite;
