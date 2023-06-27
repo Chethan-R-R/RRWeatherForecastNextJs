@@ -95,22 +95,6 @@ export default function StatusLayout({
           <div></div>
         </div>
       </div>
-      <p
-        className="displaytime"
-        style={
-          Global?.searchTheme
-            ? { color: "rgba(0,0,0,1" }
-            : { color: "rgba(244,244,244,0.6)" }
-        }
-      >
-        {Global?.currentWeather.dt !== undefined &&
-          Global?.currentWeather.timezone !== undefined
-          ? `${new Date(
-            Global?.currentWeather.dt * 1000 +
-            Global?.currentWeather.timezone * 1000
-          )}`
-          : ""}
-      </p>
       <Link
         href="https://github.com/Chethan-R-R"
         className="About"
