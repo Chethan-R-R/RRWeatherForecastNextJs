@@ -177,7 +177,7 @@ export const Global_context_provider=({children}:{children:React.ReactNode})=>{
             countForDivide=1
         }else{
             temp+=dailyWeather[i].main.temp
-            humidity+=dailyWeather[i].main.temp
+            humidity+=dailyWeather[i].main.humidity
             wind+=dailyWeather[i].wind.speed
             switch(dailyWeather[i].weather[0].main){
                 case "Rain":rain++
